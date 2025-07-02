@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { User, Mail, MessageSquare, Phone } from 'lucide-react';
 
 export const ContactUsSection: React.FC = () => {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -53,34 +54,70 @@ export const ContactUsSection: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 font-inter text-[#1464B9] text-center md:text-left">
             Get in touch
           </h2>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-6 items-stretch">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="p-2 md:p-3 rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="p-2 md:p-3 rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition"
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={4}
-              className="p-2 md:p-3 rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition resize-none"
-            />
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-5 items-stretch">
+            {/* Name Input with Icon */}
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <User className="h-5 w-5 text-[#6B7280]" />
+              </div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                className="pl-14 p-2 md:p-3 w-full rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition"
+              />
+            </div>
+
+            {/* Email Input with Icon */}
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Mail className="h-5 w-5 text-[#6B7280]" />
+              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="pl-14 p-2 md:p-3 w-full rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition"
+              />
+            </div>
+
+            {/* Phone Input with Icon */}
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Phone className="h-5 w-5 text-[#6B7280]" />
+              </div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number"
+                value={form.phone}
+                onChange={handleChange}
+                className="pl-14 p-2 md:p-3 w-full rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition"
+              />
+            </div>
+
+            {/* Message Textarea with Icon */}
+            <div className="relative">
+              <div className="absolute top-3 left-0 pl-4 flex items-start pointer-events-none">
+                <MessageSquare className="h-5 w-5 text-[#6B7280]" />
+              </div>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={form.message}
+                onChange={handleChange}
+                required
+                rows={4}
+                className="pl-14 p-2 md:p-3 w-full rounded-lg border border-[#E5E7EB] focus:border-[#1464B9] focus:ring-2 focus:ring-[#1464B9]/20 outline-none font-poppins text-sm md:text-base transition resize-none"
+              />
+            </div>
+
             <button
               type="submit"
               className="bg-[#1464B9] text-white font-semibold py-2 md:py-3 rounded-lg mt-2 hover:bg-[#174ea6] transition-colors font-inter text-base md:text-lg"

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const MissionSection: React.FC = () => {
   return (
-    <section id="mission" className="py-20 bg-[#F3F7FD]">
+    <section id="mission" className="py-10 bg-[#F3F7FD]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
           {/* Left: Title */}

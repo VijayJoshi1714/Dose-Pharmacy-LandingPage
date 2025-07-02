@@ -4,19 +4,19 @@ export const TherapeuticAreasSection: React.FC = () => {
   const therapeuticAreas = [
     {
       title: "Oncology – Triple Negative Breast & Prostate Cancer",
-      description: "Pursuing next-generation therapies to tackle aggressive and treatment-resistant cancers through precision medicine and molecular targeting."
+      description: "Targeting aggressive, treatment-resistant cancers with precision and molecular therapies."
     },
     {
       title: "Neurodegeneration – Alzheimer's and Dementia",
-      description: "Advancing novel diagnostics and disease-modifying treatments to slow progression and improve outcomes in aging-related cognitive disorders."
+      description: "Developing diagnostics and treatments to slow progression and improve outcomes in cognitive decline."
     },
     {
       title: "Autoimmune Diseases – Multiple Sclerosis & More",
-      description: "Innovating immune-modulating therapies to restore balance and reduce disease burden in complex, chronic autoimmune conditions."
+      description: "Creating immune therapies to restore balance and reduce burden in chronic autoimmune conditions."
     },
     {
       title: "Rare Genetic Disorders – Innovative Solutions",
-      description: "Leveraging cutting-edge genetic technologies to diagnose, understand, and treat rare conditions with high unmet medical need."
+      description: "Using advanced genetics to diagnose and treat rare conditions with unmet needs."
     }
   ];
 
@@ -31,7 +31,11 @@ export const TherapeuticAreasSection: React.FC = () => {
             </h3>
             <h2 className="text-4xl md:text-5xl font-bold text-[#2563EB] leading-tight font-inter">
               Transforming Lives Across Critical Health Areas
-            </h2>
+            </h2><br /><br />
+            <p className="text-xl md:text-2xl lg:text-[18px] text-[#6B7280] max-w-2xl leading-relaxed font-poppins">
+              We are pioneering treatments for diseases with the<br /> greatest unmet needs, focusing on improving patient<br /> outcomes through innovative and targeted therapies.
+              <br />By addressing some of the most complex and challenging health conditions, we aim to transform lives and deliver meaningful advances in care.
+            </p>
           </div>
           {/* Right - Cards Grid */}
           <div className="grid grid-cols-1 gap-14 lg:gap-x-14 lg:gap-y-4 lg:grid-cols-2 lg:grid-rows-2 lg:grid-flow-col md:grid-cols-2 md:grid-rows-2 md:grid-flow-col">
