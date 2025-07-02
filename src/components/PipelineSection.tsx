@@ -161,7 +161,11 @@ export const PipelineSection: React.FC = () => {
         {/* Pipeline Table - Mobile/Tablet */}
         <div className="lg:hidden space-y-6">
           {pipelinePrograms.map((program) => (
-            <div key={program.id} className="bg-white border-2 border-gray-400 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-[#1464B9] hover:transform hover:scale-105 group">
+            <div key={program.id} className="bg-white border-2 border-gray-400 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-[#1464B9] hover:transform hover:scale-105 group relative
+            before:absolute before:top-0 before:right-0 before:w-0 before:h-0 before:border-t-4 before:border-r-4 before:border-t-[#1464B9] before:border-r-[#1464B9] before:transition-all before:duration-300 before:opacity-0
+            after:absolute after:top-0 after:right-0 after:w-0 after:h-0 after:border-t-4 after:border-r-4 after:border-t-transparent after:border-r-transparent after:transition-all after:duration-300
+            hover:before:w-1/2 hover:before:h-1/2 hover:before:opacity-100 hover:before:shadow-lg
+            hover:after:w-1/2 hover:after:h-1/2 hover:after:border-t-[#0f4c8c] hover:after:border-r-[#0f4c8c] hover:after:shadow-xl">
               {/* Program Header */}
               <div className="p-4 border-b-2 border-gray-400 transition-all duration-300 group-hover:bg-[#dbeafe]" style={{ backgroundColor: '#E8F5E8' }}>
                 <h3 className="font-bold text-purple-600 text-lg text-center transition-all duration-300 group-hover:text-purple-800 group-hover:transform group-hover:scale-105">
@@ -185,7 +189,11 @@ export const PipelineSection: React.FC = () => {
         </div>
 
         {/* Pipeline Summary */}
-        <div className="mt-12 bg-white rounded-xl shadow-lg border border-gray-200 p-8 transition-all duration-300 hover:shadow-2xl hover:border-[#1464B9] hover:transform hover:scale-105 group">
+        <div className="mt-12 bg-white rounded-xl shadow-lg border border-gray-200 p-8 transition-all duration-300 hover:shadow-2xl hover:border-[#1464B9] hover:transform hover:scale-105 group relative
+        before:absolute before:top-0 before:right-0 before:w-0 before:h-0 before:border-t-4 before:border-r-4 before:border-t-[#1464B9] before:border-r-[#1464B9] before:transition-all before:duration-300 before:opacity-0
+        after:absolute after:top-0 after:right-0 after:w-0 after:h-0 after:border-t-4 after:border-r-4 after:border-t-transparent after:border-r-transparent after:transition-all after:duration-300
+        hover:before:w-1/2 hover:before:h-1/2 hover:before:opacity-100 hover:before:shadow-lg
+        hover:after:w-1/2 hover:after:h-1/2 hover:after:border-t-[#0f4c8c] hover:after:border-r-[#0f4c8c] hover:after:shadow-xl">
           <h3 className="text-2xl font-bold text-[#1464B9] font-inter mb-6 text-center transition-all duration-300 group-hover:text-[#0f4c8c] group-hover:transform group-hover:scale-105">
             Pipeline Overview
           </h3>
@@ -213,7 +221,11 @@ export const PipelineSection: React.FC = () => {
         </div>
 
         {/* Legend */}
-        <div className="mt-8 bg-white rounded-xl border border-gray-200 p-6 transition-all duration-300 hover:shadow-xl hover:border-[#1464B9] group">
+        <div className="mt-8 bg-white rounded-xl border border-gray-200 p-6 transition-all duration-300 hover:shadow-xl hover:border-[#1464B9] group relative
+        before:absolute before:top-0 before:right-0 before:w-0 before:h-0 before:border-t-4 before:border-r-4 before:border-t-[#1464B9] before:border-r-[#1464B9] before:transition-all before:duration-300 before:opacity-0
+        after:absolute after:top-0 after:right-0 after:w-0 after:h-0 after:border-t-4 after:border-r-4 after:border-t-transparent after:border-r-transparent after:transition-all after:duration-300
+        hover:before:w-1/2 hover:before:h-1/2 hover:before:opacity-100 hover:before:shadow-lg
+        hover:after:w-1/2 hover:after:h-1/2 hover:after:border-t-[#0f4c8c] hover:after:border-r-[#0f4c8c] hover:after:shadow-xl">
           <h4 className="text-lg font-bold text-[#1464B9] font-inter mb-4 text-center transition-all duration-300 group-hover:text-[#0f4c8c] group-hover:transform group-hover:scale-105">
             Development Stage Legend
           </h4>

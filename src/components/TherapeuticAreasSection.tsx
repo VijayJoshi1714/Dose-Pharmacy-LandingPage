@@ -43,7 +43,11 @@ export const TherapeuticAreasSection: React.FC = () => {
             {[0, 2, 1, 3].map((i) => (
               <div
                 key={i}
-                className="group transition-all lg:ml-[-60px] duration-300 hover:shadow-2xl p-5 sm:p-7 flex flex-col gap-4 justify-center h-full bg-white border-2 border-[#E5E7EB] w-[300px] max-w-2xl mx-auto hover:border-[#1464B9] hover:transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
+                className="group transition-all lg:ml-[-60px] duration-300 hover:shadow-2xl p-5 sm:p-7 flex flex-col gap-4 justify-center h-full bg-white border-2 border-[#E5E7EB] w-[300px] max-w-2xl mx-auto hover:border-[#1464B9] hover:transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative
+                before:absolute before:top-0 before:right-0 before:w-0 before:h-0 before:border-t-4 before:border-r-4 before:border-t-[#1464B9] before:border-r-[#1464B9] before:transition-all before:duration-300 before:opacity-0
+                after:absolute after:top-0 after:right-0 after:w-0 after:h-0 after:border-t-4 after:border-r-4 after:border-t-transparent after:border-r-transparent after:transition-all after:duration-300
+                hover:before:w-1/2 hover:before:h-1/2 hover:before:opacity-100 hover:before:shadow-lg
+                hover:after:w-1/2 hover:after:h-1/2 hover:after:border-t-[#0f4c8c] hover:after:border-r-[#0f4c8c] hover:after:shadow-xl"
               >
                 {/* Icon Accent */}
                 <span className="mb-2 transition-all duration-300 group-hover:transform group-hover:scale-110">

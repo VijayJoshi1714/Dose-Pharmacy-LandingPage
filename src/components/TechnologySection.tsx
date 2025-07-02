@@ -55,7 +55,11 @@ export const TechnologySection: React.FC = () => (
         {pillars.map((pillar) => (
           <div
             key={pillar.title}
-            className='group bg-white rounded-lg border-2 border-[#E5E7EB] flex flex-col items-center shadow-none hover:shadow-2xl transition-all duration-300 mx-auto h-full min-h-[320px] p-6 hover:border-[#1464B9] hover:transform hover:scale-105 hover:-translate-y-2 cursor-pointer'
+            className='group bg-white rounded-lg border-2 border-[#E5E7EB] flex flex-col items-center shadow-none hover:shadow-2xl transition-all duration-300 mx-auto h-full min-h-[320px] p-6 hover:border-[#1464B9] hover:transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative
+            before:absolute before:top-0 before:right-0 before:w-0 before:h-0 before:border-t-4 before:border-r-4 before:border-t-[#1464B9] before:border-r-[#1464B9] before:transition-all before:duration-300 before:opacity-0
+            after:absolute after:top-0 after:right-0 after:w-0 after:h-0 after:border-t-4 after:border-r-4 before:border-t-transparent after:border-r-transparent after:transition-all after:duration-300
+            hover:before:w-1/2 hover:before:h-1/2 hover:before:opacity-100 hover:before:shadow-lg
+            hover:after:w-1/2 hover:after:h-1/2 hover:after:border-t-[#0f4c8c] hover:after:border-r-[#0f4c8c] hover:after:shadow-xl'
           >
             <div className='mb-4 transition-all duration-300 group-hover:transform group-hover:scale-110'>{pillar.icon}</div>
             <h3 className='text-xl font-bold text-[#1464B9] mb-2 font-inter text-center transition-all duration-300 group-hover:text-[#0f4c8c] group-hover:transform group-hover:scale-105'>
